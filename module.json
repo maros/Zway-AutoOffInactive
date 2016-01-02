@@ -1,0 +1,85 @@
+{
+    "author":"Maroš Kollár",
+    "category":"device_enhancments",
+    "defaults":{
+        "description":"__description__",
+        "title":"__title__",
+        "timeout":30
+    },
+    "dependencies":[],
+    "homepage":"http://k-1.com",
+    "icon":"icon_on.png",
+    "maturity":"stable",
+    "moduleName":"AutoOffInactive",
+    "options":{
+        "fields":{
+            "sensors": {
+                "label": "__sensors_label__",
+                "helper": "__sensors_helper__",
+                "fields" : {
+                    "item" : {
+                        "type": "select",
+                        "datasource": "namespaces",
+                        "field": "optionLabels",
+                        "optionLabels": "namespaces:devices_sensorBinary:deviceName"
+                    }
+                },
+                "order": 1
+            },
+            "devices": {
+                "label": "__switch_label__",
+                "helper": "__switch_helper__",
+                "fields" : {
+                    "item" : {
+                        "type": "select",
+                        "datasource": "namespaces",
+                        "field": "optionLabels",
+                        "optionLabels": "namespaces:devices_switchBinary:deviceName,namespaces:devices_switchMultilevel:deviceName"
+                    }
+                },
+                "order": 2
+            },
+            "timeout": {
+                "label": "__timeout_label__",
+                "helper": "__timeout_helper__"
+            }
+        }
+    },
+    "repository":{
+        "source":"https://github.com/maros/Zway-AutoOffInactive",
+        "type":"git"
+    },
+    "schema":{
+        "properties":{
+            "devices": {
+                "type": "array",
+                "minItems": 1,
+                "items" : {
+                    "field": "enum",
+                    "datasource": "namespaces",
+                    "enum": "namespaces:devices_switchBinary:deviceId,namespaces:devices_switchMultilevel:deviceId",
+                    "required": true
+                }
+            },
+            "sensors": {
+                "type": "array",
+                "minItems": 1,
+                "items" : {
+                    "field": "enum",
+                    "datasource": "namespaces",
+                    "enum": "namespaces:devices_sensorBinary:deviceId",
+                    "required": true
+                }
+            },
+            "timeout": {
+                "required": true,
+                "type": "number",
+                "default": 30
+            }
+        },
+        "required":true,
+        "type":"object"
+    },
+    "singleton":false,
+    "version":"1.00"
+}
