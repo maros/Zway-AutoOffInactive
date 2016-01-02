@@ -6,5 +6,5 @@
    "switch_label" : "Multiple switches that should be turned off after given inactivity",
    "timeout_helper" : "Timeout period in minutes",
    "timeout_label" : "Timeout",
-   "title" : "Automated Inacivity Switch Off"
+   "title" : "Automated Inactivity Switch Off"
 }
