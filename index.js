@@ -47,7 +47,7 @@ AutoOffInactive.prototype.stop = function () {
 AutoOffInactive.prototype.checkPresence = function () {
     var self = this;
     
-    var now             = (new Date()).getTime() / 1000;
+    var now             = parseInt((new Date()).getTime() / 1000);
     var limit           = now - self.config.timeout * 60;
     var lastPresence    = 0;
     
@@ -63,23 +63,23 @@ AutoOffInactive.prototype.checkPresence = function () {
         }
     });
     
-    self.log('Last presence at '+lastPresence);
-    self.log('Limit presence at '+limit);
-    
     if (lastPresence < limit) {
         self.processDeviceList(self.config.devices,function(deviceObject) {
+            if (deviceObject.get('metrics:auto') === true) return; // Something else is managing this device
+            
             var level       = deviceObject.get('metrics:level');
             var deviceType  = deviceObject.get('deviceType');
+            
             if (deviceType === 'switchBinary') {
-                level = (level === 'on');
+                level = (level === 'on') ? true:false;
             } else if (deviceType === 'switchMultilevel') {
-                level = (level > 0);
+                level = (level > 0) ? true:false;
             }
             
+            self.log(deviceObject.id+' -> '+level+ ' -> '+deviceObject.get('metrics:level'));
             if (level) {
                 self.log('Switching off device '+deviceObject.id+' after inactivity');
                 deviceObject.performCommand('off'); 
-                deviceObject.set('metrics:auto',false);
             }
         });
     }
