@@ -1,85 +1,85 @@
 {
-    "author":"Maroš Kollár",
-    "category":"device_enhancments",
-    "defaults":{
-        "description":"__description__",
-        "title":"__title__",
-        "timeout":30
-    },
-    "dependencies":[],
-    "homepage":"http://k-1.com",
-    "icon":"icon.png",
-    "maturity":"stable",
-    "moduleName":"AutoOffInactive",
-    "options":{
-        "fields":{
-            "sensors": {
-                "label": "__sensors_label__",
-                "helper": "__sensors_helper__",
-                "fields" : {
-                    "item" : {
-                        "type": "select",
-                        "datasource": "namespaces",
-                        "field": "optionLabels",
-                        "optionLabels": "namespaces:devices_sensorBinary:deviceName"
-                    }
-                },
-                "order": 1
+   "author" : "Maroš Kollár",
+   "category" : "device_enhancments",
+   "defaults" : {
+      "description" : "__description__",
+      "timeout" : 30,
+      "title" : "__title__"
+   },
+   "dependencies" : [],
+   "homepage" : "http://k-1.com",
+   "icon" : "icon.png",
+   "maturity" : "stable",
+   "moduleName" : "AutoOffInactive",
+   "options" : {
+      "fields" : {
+         "devices" : {
+            "fields" : {
+               "item" : {
+                  "datasource" : "namespaces",
+                  "field" : "optionLabels",
+                  "optionLabels" : "namespaces:devices_switchBinary:deviceName,namespaces:devices_switchMultilevel:deviceName",
+                  "type" : "select"
+               }
             },
-            "devices": {
-                "label": "__switch_label__",
-                "helper": "__switch_helper__",
-                "fields" : {
-                    "item" : {
-                        "type": "select",
-                        "datasource": "namespaces",
-                        "field": "optionLabels",
-                        "optionLabels": "namespaces:devices_switchBinary:deviceName,namespaces:devices_switchMultilevel:deviceName"
-                    }
-                },
-                "order": 2
+            "helper" : "__switch_helper__",
+            "label" : "__switch_label__",
+            "order" : 2
+         },
+         "sensors" : {
+            "fields" : {
+               "item" : {
+                  "datasource" : "namespaces",
+                  "field" : "optionLabels",
+                  "optionLabels" : "namespaces:devices_sensorBinary:deviceName",
+                  "type" : "select"
+               }
             },
-            "timeout": {
-                "label": "__timeout_label__",
-                "helper": "__timeout_helper__"
-            }
-        }
-    },
-    "repository":{
-        "source":"https://github.com/maros/Zway-AutoOffInactive",
-        "type":"git"
-    },
-    "schema":{
-        "properties":{
-            "devices": {
-                "type": "array",
-                "minItems": 1,
-                "items" : {
-                    "field": "enum",
-                    "datasource": "namespaces",
-                    "enum": "namespaces:devices_switchBinary:deviceId,namespaces:devices_switchMultilevel:deviceId",
-                    "required": true
-                }
+            "helper" : "__sensors_helper__",
+            "label" : "__sensors_label__",
+            "order" : 1
+         },
+         "timeout" : {
+            "helper" : "__timeout_helper__",
+            "label" : "__timeout_label__"
+         }
+      }
+   },
+   "repository" : {
+      "source" : "https://github.com/maros/Zway-AutoOffInactive",
+      "type" : "git"
+   },
+   "schema" : {
+      "properties" : {
+         "devices" : {
+            "items" : {
+               "datasource" : "namespaces",
+               "enum" : "namespaces:devices_switchBinary:deviceId,namespaces:devices_switchMultilevel:deviceId",
+               "field" : "enum",
+               "required" : true
             },
-            "sensors": {
-                "type": "array",
-                "minItems": 1,
-                "items" : {
-                    "field": "enum",
-                    "datasource": "namespaces",
-                    "enum": "namespaces:devices_sensorBinary:deviceId",
-                    "required": true
-                }
+            "minItems" : 1,
+            "type" : "array"
+         },
+         "sensors" : {
+            "items" : {
+               "datasource" : "namespaces",
+               "enum" : "namespaces:devices_sensorBinary:deviceId",
+               "field" : "enum",
+               "required" : true
             },
-            "timeout": {
-                "required": true,
-                "type": "number",
-                "default": 30
-            }
-        },
-        "required":true,
-        "type":"object"
-    },
-    "singleton":false,
-    "version":"1.00"
+            "minItems" : 1,
+            "type" : "array"
+         },
+         "timeout" : {
+            "default" : 30,
+            "required" : true,
+            "type" : "number"
+         }
+      },
+      "required" : true,
+      "type" : "object"
+   },
+   "singleton" : false,
+   "version" : "1.00"
 }
