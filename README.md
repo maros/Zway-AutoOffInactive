@@ -4,19 +4,22 @@ This module turns off devices after a defined time of inactivity. Activity
 can be measured using multiple binary sensors/devices, like movement sensors
 or switches.
 
+For more advanced use-cases you could check out the MotionTrigger module at
+https://github.com/maros/Zway-MotionTrigger.
+
 # Configuration
 
 ## sensors
 
-Multiple binary sensors that indicate activity.
+Multiple binary sensors that indicate activity / human presence.
 
 ## devices
 
-List of devices that should be switches
+List of devices that should be switched off.
 
 ## timeout
 
-Timeout period in minutes
+Timeout period in minutes.
 
 # Events
 
@@ -30,7 +33,6 @@ No virtual device is created
 
 Make sure that the BaseModule is installed prior to installing this module 
 ( https://github.com/maros/Zway-BaseModule )
-
 
 ```shell
 cd /opt/z-way-server/automation/modules
