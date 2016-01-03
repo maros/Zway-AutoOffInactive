@@ -2,8 +2,8 @@
    "description" : "This module will automatically turn off selected devices (switch, dimmer, motor control) after no movement has been detected for a defined time.",
    "sensors_helper" : "Multiple binary sensors (ideally movement sensors) that measure presence",
    "sensors_label" : "Sensors",
-   "switch_helper" : "Switches",
-   "switch_label" : "Multiple switches that should be turned off after given inactivity",
+   "switch_label" : "Switches",
+   "switch_helper" : "Multiple switches that should be turned off after given inactivity",
    "timeout_helper" : "Timeout period in minutes",
    "timeout_label" : "Timeout",
    "title" : "Automated Inactivity Switch Off"
