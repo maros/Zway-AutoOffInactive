@@ -6,7 +6,7 @@
       "timeout" : 30,
       "title" : "__title__"
    },
-   "dependencies" : [],
+   "dependencies" : ["BaseModule"],
    "homepage" : "https://github.com/maros/Zway-AutoOffInactive",
    "icon" : "icon.png",
    "maturity" : "stable",
