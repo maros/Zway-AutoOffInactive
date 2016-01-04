@@ -36,12 +36,12 @@ Make sure that the BaseModule is installed prior to installing this module
 
 ```shell
 cd /opt/z-way-server/automation/modules
-git clone https://github.com/maros/Zway-WindowControl.git WindowControl --branch latest
+git clone https://github.com/maros/Zway-AutoOffInactive.git AutoOffInactive --branch latest
 ```
 
 To update or install a specific version
 ```shell
-cd /opt/z-way-server/automation/modules/WindowControl
+cd /opt/z-way-server/automation/modules/AutoOffInactive
 git fetch --tags
 # For latest released version
 git checkout tags/latest
