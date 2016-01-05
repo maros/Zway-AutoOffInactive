@@ -54,7 +54,7 @@ AutoOffInactive.prototype.checkPresence = function () {
     // Get current temperature from most recent measurement
     self.processDeviceList(self.config.sensors,function(deviceObject) {
         var level   = deviceObject.get('metrics:level');
-        var last    = deviceObject.get('metrics:changeTime') || 1;
+        var last    = deviceObject.get('metrics:modificationTime') || 1;
         
         if (level === 'on') {
             lastPresence = now;
