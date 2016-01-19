@@ -1,10 +1,10 @@
 {
-   "m_descr" : "This module will automatically turn off selected devices (switch, dimmer, motor control) after no movement has been detected for a defined time.",
+   "m_descr" : "This module will automatically turn off selected devices (switch, dimmer, motor control) after no movement has been detected for a defined time.\nCheck https://github.com/maros/Zway-AutoOffInactive/blob/master/README.md for detailed documentation.",
+   "m_title" : "Automated Inactivity Switch Off",
    "sensors_helper" : "Multiple binary sensors (ideally movement sensors) that measure presence",
    "sensors_label" : "Sensors",
-   "switch_label" : "Switches",
    "switch_helper" : "Multiple switches that should be turned off after given inactivity",
+   "switch_label" : "Switches",
    "timeout_helper" : "Timeout period in minutes",
-   "timeout_label" : "Timeout",
-   "m_title" : "Automated Inactivity Switch Off"
+   "timeout_label" : "Timeout"
 }
