@@ -1,5 +1,5 @@
 {
-   "m_descr" : "Dieses Modul schaltet automatisch alle eingestellten Geräte (zB. Schalter, Dimmer, Motorsteuerung) nach einer eingestellten Periode ab wenn über mehrer Sensoren keine Aktivität festgestellt wurde.<br>Siehe  <a href=\"https://github.com/maros/Zway-AutoOffInactive/blob/master/README.md\">github.com/maros/Zway-AutoOffInactive</a> für detailliertere Dokumentation.",
+   "m_descr" : "Dieses Modul schaltet automatisch alle eingestellten Geräte (zB. Schalter, Dimmer, Motorsteuerung) nach einer eingestellten Periode ab wenn über mehrer Sensoren keine Aktivität festgestellt wurde.<br>Siehe <a href=https://github.com/maros/Zway-AutoOffInactive/blob/master/README.md>github.com/maros/Zway-AutoOffInactive</a> für detailliertere Dokumentation.",
    "m_title" : "Automatischer Inaktivitäts Ausschalter",
    "sensors_helper" : "Mehrere binäre Senoren (zB. Bewwgungsmelder) die Aktivität erfassen",
    "sensors_label" : "Sensoren",
