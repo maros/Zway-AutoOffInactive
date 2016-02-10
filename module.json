@@ -1,6 +1,6 @@
 {
    "author" : "Maroš Kollár",
-   "category" : "device_enhancments",
+   "category" : "device_enhancements",
    "defaults" : {
       "description" : "__m_descr__",
       "timeout" : 30,
