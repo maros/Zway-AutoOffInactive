@@ -29,7 +29,7 @@ AutoOffInactive.prototype.init = function (config) {
 
     var self = this;
     
-    this.interval = setInterval(_.bind(self.checkPresence,self),1000*60);
+    this.interval = setInterval(_.bind(self.checkInactivity,self),1000*60);
 };
 
 AutoOffInactive.prototype.stop = function () {
@@ -44,7 +44,7 @@ AutoOffInactive.prototype.stop = function () {
 // --- Module methods
 // ----------------------------------------------------------------------------
 
-AutoOffInactive.prototype.checkPresence = function () {
+AutoOffInactive.prototype.checkInactivity = function () {
     var self = this;
     
     var now             = parseInt((new Date()).getTime() / 1000);
