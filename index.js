@@ -26,16 +26,16 @@ _module = AutoOffInactive;
 
 AutoOffInactive.prototype.init = function (config) {
     AutoOffInactive.super_.prototype.init.call(this, config);
-
+    
     var self = this;
     
-    this.interval = setInterval(_.bind(self.checkInactivity,self),1000*60);
+    self.interval = setInterval(_.bind(self.checkInactivity,self),1000*60);
 };
 
 AutoOffInactive.prototype.stop = function () {
     var self = this;
     
-    clearInterval(this.interval);
+    clearInterval(self.interval);
     
     AutoOffInactive.super_.prototype.stop.call(this);
 };
@@ -78,7 +78,7 @@ AutoOffInactive.prototype.checkInactivity = function () {
             
             self.log(deviceObject.id+' -> '+level+ ' -> '+deviceObject.get('metrics:level'));
             if (level === true) {
-                self.log('Switching off device '+deviceObject.id+' after inactivity (last activity at '+checkInactivity+')');
+                self.log('Switching off device '+deviceObject.id+' after inactivity (last activity at '+lastPresence+')');
                 deviceObject.performCommand('off'); 
             }
         });
