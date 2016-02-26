@@ -76,7 +76,7 @@ AutoOffInactive.prototype.checkInactivity = function () {
                 level = (level > 0) ? true:false;
             }
             
-            self.log(deviceObject.id+' -> '+level+ ' -> '+deviceObject.get('metrics:level'));
+            //self.log(deviceObject.id+' -> '+level+ ' -> '+deviceObject.get('metrics:level'));
             if (level === true) {
                 self.log('Switching off device '+deviceObject.id+' after inactivity (last activity at '+lastPresence+')');
                 deviceObject.performCommand('off'); 
