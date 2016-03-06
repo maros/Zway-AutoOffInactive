@@ -66,7 +66,7 @@
          "sensors" : {
             "items" : {
                "datasource" : "namespaces",
-               "enum" : "namespaces:devices_sensorBinary:deviceId,namespaces:devices_switchBinary:deviceId",
+               "enum" : "namespaces:devices_sensorBinary:deviceId",
                "field" : "enum",
                "required" : true
             },
