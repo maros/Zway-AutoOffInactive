@@ -1,3 +1,12 @@
+1.02 2016 Mar 06, Sun
+    * Fix config labels
+    * Update installation howto
+    * Cleanup
+    * Improved logging
+    * Better method name
+    * Fix typo in module category
+    * Add doc link
+
 1.01 2016 Jan 08, Fri
     * Rename title/description key to make module work in appstore
     * Add binary switches to sensors list
