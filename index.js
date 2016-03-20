@@ -49,7 +49,7 @@ AutoOffInactive.prototype.checkInactivity = function () {
     
     var now             = parseInt((new Date()).getTime() / 1000);
     var limit           = now - self.config.timeout * 60;
-    var lastPresence    = 0;
+    var lastActivity    = 0;
     
     // Get current temperature from most recent measurement
     self.processDeviceList(self.config.sensors,function(deviceObject) {
@@ -57,13 +57,13 @@ AutoOffInactive.prototype.checkInactivity = function () {
         var last    = deviceObject.get('metrics:modificationTime') || 1;
         
         if (level === 'on') {
-            lastPresence = now;
-        } else if (last > lastPresence) {
-            lastPresence = last;
+            lastActivity = now;
+        } else if (last > lastActivity) {
+            lastActivity = last;
         }
     });
     
-    if (lastPresence < limit) {
+    if (lastActivity < limit) {
         self.processDeviceList(self.config.devices,function(deviceObject) {
             if (deviceObject.get('metrics:auto') === true) return; // Something else is managing this device
             
@@ -78,7 +78,7 @@ AutoOffInactive.prototype.checkInactivity = function () {
             
             //self.log(deviceObject.id+' -> '+level+ ' -> '+deviceObject.get('metrics:level'));
             if (level === true) {
-                self.log('Switching off device '+deviceObject.id+' after inactivity (last activity at '+lastPresence+')');
+                self.log('Switching off device '+deviceObject.id+' after inactivity (last activity at '+lastActivity+')');
                 deviceObject.performCommand('off'); 
             }
         });
