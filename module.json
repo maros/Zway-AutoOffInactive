@@ -4,7 +4,9 @@
    "defaults" : {
       "description" : "__m_descr__",
       "timeout" : 30,
-      "title" : "__m_title__"
+      "title" : "__m_title__",
+      "devices" : [],
+      "sensors" : []
    },
    "dependencies" : [
       "BaseModule"
