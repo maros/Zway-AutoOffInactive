@@ -1,4 +1,6 @@
 {
+   "delay_helper" : "Sets a delay (in minutes) to skip inactivity checks after a device has been turned on",
+   "delay_label" : "Delay",
    "m_descr" : "This module will automatically turn off selected devices (switch, dimmer, motor control) after no movement or activity has been detected for a defined time.<br>Check <a href=https://github.com/maros/Zway-AutoOffInactive/blob/master/README.md>github.com/maros/Zway-AutoOffInactive</a> for detailed documentation.",
    "m_title" : "Automated Inactivity Switch Off",
    "sensors_helper" : "Multiple binary sensors (ideally movement sensors) that measure presence",

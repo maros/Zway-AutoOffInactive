@@ -49,6 +49,7 @@ AutoOffInactive.prototype.checkInactivity = function () {
 
     var now             = parseInt((new Date()).getTime() / 1000);
     var limit           = now - self.config.timeout * 60;
+    var delay           = now - self.config.delay * 60;
     var lastActivity    = 0;
 
     // Get last activity
@@ -68,6 +69,7 @@ AutoOffInactive.prototype.checkInactivity = function () {
         self.processDeviceList(self.config.devices,function(deviceObject) {
             if (deviceObject.get('metrics:auto') === true) return; // Something else is managing this device
 
+            var modTime     = deviceObject.get('metrics:modificationTime');
             var level       = deviceObject.get('metrics:level');
             var deviceType  = deviceObject.get('deviceType');
 
@@ -79,9 +81,15 @@ AutoOffInactive.prototype.checkInactivity = function () {
 
             //self.log(deviceObject.id+' -> '+level+ ' -> '+deviceObject.get('metrics:level'));
             if (level === true) {
-                self.log('Switching off device '+deviceObject.id+' after inactivity (last activity at '+lastActivity+')');
-                deviceObject.performCommand('off'); 
+                if (modTime <= delay) {
+                    self.log('Switching off device '+deviceObject.id+' after inactivity (last activity at '+lastActivity+', turned on at '+modTime+')');
+                    deviceObject.performCommand('off');
+                } else {
+                    self.log('Not switching off device '+deviceObject.id+' yet. (last activity at '+lastActivity+', turned on at '+modTime+')');
+                }
             }
         });
+    } else {
+        //self.log('Detected recent activity. (last activity at '+lastActivity+', limit '+limit+')');
     }
 };

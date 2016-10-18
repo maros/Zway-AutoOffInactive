@@ -4,6 +4,7 @@
    "defaults" : {
       "description" : "__m_descr__",
       "timeout" : 30,
+      "delay": 0,
       "title" : "__m_title__",
       "devices" : [],
       "sensors" : []
@@ -45,7 +46,13 @@
          },
          "timeout" : {
             "helper" : "__timeout_helper__",
-            "label" : "__timeout_label__"
+            "label" : "__timeout_label__",
+            "order" : 3
+         },
+         "delay" : {
+            "helper" : "__delay_helper__",
+            "label" : "__delay_label__",
+            "order" : 4
          }
       }
    },
@@ -76,10 +83,13 @@
             "type" : "array"
          },
          "timeout" : {
-            "default" : 30,
             "required" : true,
             "type" : "number"
-         }
+         },
+         "delay" : {
+            "required" : true,
+            "type" : "number"
+          }
       },
       "required" : true,
       "type" : "object"
