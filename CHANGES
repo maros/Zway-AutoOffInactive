@@ -1,3 +1,9 @@
+1.03 2016 Oct 19, Wed
+    * Add delay after turning on a device
+    * Improve texts
+    * Set defaults
+    * Better variable name
+
 1.02 2016 Mar 06, Sun
     * Fix config labels
     * Update installation howto
