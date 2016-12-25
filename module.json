@@ -12,7 +12,7 @@
    "dependencies" : [
       "BaseModule"
    ],
-   "homepage" : "https://github.com/maros/Zway-AutoOffInactive",
+   "homepage" : "https://github.com/maros/Zway-AutoOffInactive/",
    "icon" : "icon.png",
    "maturity" : "stable",
    "moduleName" : "AutoOffInactive",
