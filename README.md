@@ -19,7 +19,12 @@ List of devices that should be switched off.
 
 ## timeout
 
-Timeout period in minutes.
+Timeout period in minutes. Will turn of the managed devices if last sensor
+timeout expires.
+
+## delay
+
+Optional timeout delay after the device was turned on.
 
 # Events
 
