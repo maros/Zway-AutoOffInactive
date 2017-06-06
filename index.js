@@ -64,8 +64,10 @@ AutoOffInactive.prototype.checkInactivity = function () {
         }
     });
 
+    if (lastActivity === 0) {
+        self.error('No activity at all detected. Something is odd.');
     // Last activity reaced limit
-    if (lastActivity < limit) {
+    } else if (lastActivity < limit) {
         self.processDeviceList(self.config.devices,function(deviceObject) {
             if (deviceObject.get('metrics:auto') === true) return; // Something else is managing this device
 
