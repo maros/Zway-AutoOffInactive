@@ -1,12 +1,12 @@
 {
    "delay_helper" : "Verzögerung (in Minuten) des Ausschaltens eines Gerätes nachdem es manuell eingeschaltet wurde",
    "delay_label" : "Verzögerung",
-   "m_descr" : "Dieses Modul schaltet automatisch alle eingestellten Geräte (zB. Schalter, Dimmer, Motorsteuerung) nach einer eingestellten Periode ab wenn über mehrer Sensoren keine Aktivität festgestellt wurde.<br>Siehe <a href=https://github.com/maros/Zway-AutoOffInactive/blob/master/README.md>github.com/maros/Zway-AutoOffInactive</a> für detailliertere Dokumentation.",
+   "m_descr" : "Dieses Modul schaltet automatisch alle konfigurierten Geräte (zB. Schalter, Dimmer) nach einer definierten Periode ab, wenn über mehrere Sensoren (wie zB. Bewegungsmelder) keine Aktivität festgestellt wurde.<br>Siehe <a href=https://github.com/maros/Zway-AutoOffInactive/blob/master/README.md>github.com/maros/Zway-AutoOffInactive</a> für detailliertere Dokumentation.",
    "m_title" : "Automatischer Inaktivitäts Ausschalter",
-   "sensors_helper" : "Mehrere binäre Senoren (zB. Bewegungsmelder) die Aktivität erfassen",
+   "sensors_helper" : "Mehrere binäre Senoren (zB. Bewegungsmelder, Türsensoren) die Aktivität erfassen",
    "sensors_label" : "Sensoren",
-   "switch_helper" : "Akzeptiert mehrere Geräte die nach der eingestellten Inaktivitätsperiode ausgeschalten werden sollen",
-   "switch_label" : "Schalter",
-   "timeout_helper" : "Inaktivitätsperiode in Minuten",
+   "switch_helper" : "Mehrere Geräte die nach der eingestellten Inaktivitätsperiode ausgeschalten werden sollen",
+   "switch_label" : "Aktoren",
+   "timeout_helper" : "Inaktivitätsperiode in Minuten. Wird in diesem Zeitraum keine Aktivität von den Sensoren gemeldet, schalten sich dich die eingestellten Aktoren ab.",
    "timeout_label" : "Inaktivität nach"
 }
