@@ -1,8 +1,7 @@
 # Zway-AutoOffInactive
 
-This module turns off devices after a defined time of inactivity. Activity
-can be measured using multiple binary sensors/devices, like movement sensors
-or switches.
+This module will automatically turn off selected devices (such as switches
+or dimmers) after no movement or activity has been detected for a defined period.
 
 For more advanced use-cases you could check out the MotionTrigger module at
 https://github.com/maros/Zway-MotionTrigger.
@@ -11,20 +10,22 @@ https://github.com/maros/Zway-MotionTrigger.
 
 ## sensors
 
-Multiple binary sensors that indicate activity / human presence.
+Multiple binary sensors that indicate activity or human presence.
 
 ## devices
 
-List of devices that should be switched off.
+Multiple binary switches or dimmers that should be turned off after
+a given inactivity period
 
 ## timeout
 
-Timeout period in minutes. Will turn of the managed devices if last sensor
-timeout expires.
+Timeout period in minutes. Will turn off all devices n-minutes after the last
+activity was reported from the sensors.
 
 ## delay
 
-Optional timeout delay after the device was turned on.
+Optionally sets a delay (in minutes) to skip inactivity checks after a device
+has been turned on manually
 
 # Events
 

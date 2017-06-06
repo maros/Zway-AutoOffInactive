@@ -7,6 +7,6 @@
    "sensors_label" : "Sensors",
    "switch_helper" : "Multiple switches that should be turned off after given inactivity period",
    "switch_label" : "Switches",
-   "timeout_helper" : "Timeout period in minutes. Will turn off all devices n-minutes after the last activity",
+   "timeout_helper" : "Timeout period in minutes. Will turn off all devices n-minutes after the last activity was reported from the sensors",
    "timeout_label" : "Timeout"
 }
