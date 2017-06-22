@@ -48,8 +48,8 @@ AutoOffInactive.prototype.checkInactivity = function () {
     var self = this;
 
     var now             = parseInt((new Date()).getTime() / 1000);
-    var limit           = now - self.config.timeout * 60;
-    var delay           = now - self.config.delay * 60;
+    var limit           = now - (self.config.timeout * 60);
+    var delay           = now - (self.config.delay * 60);
     var lastActivity    = 0;
 
     // Get last activity
