@@ -1,3 +1,8 @@
+1.04 2017 Jun 24, Sat
+    * Improve labels and helper texts
+    * Gracefully handle missing sensor
+    * Update module documentation, copyright, homepage and documentation
+
 1.03 2016 Oct 19, Wed
     * Add delay after turning on a device
     * Improve texts
